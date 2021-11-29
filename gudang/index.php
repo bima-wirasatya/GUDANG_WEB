@@ -1,8 +1,4 @@
 <?php
-//register disini ya coba dulu
-?>
-
-<?php
 //ganti password coba juga di sini
 ?>
 
@@ -76,18 +72,17 @@ if(isset($_POST['submit'])){
 
             </form>
 
-            <form id="register" action="post" class="input-group">
+            <form id="register" method="POST" action="index.php" class="input-group">
                 <p>Email:</p>
-                <input type="email" class="input-field" required>
+                <input type="email" name="emailR" class="input-field" placeholder="AlamatEmail@gmail.com" required>
                 <p>No telepon :</p>
-                <input type="tel" pattern="\(\d\d\d\)-\d\d\d\d\d\d\d\d\d" class="input-field" placeholder="(999)-999999999" required >
+                <input type="tel" name="phone" pattern="\d\d\d\d\d\d\d\d\d\d\d\d" class="input-field" placeholder="999999999999" required >
                 <p>Password :</p>
-                <input type="text" class="input-field" required>
+                <input type="password" name="passwordR" class="input-field" required>
                 <p>Alamat :</p>
-                <input type="text" class="input-field" required>
-                <input type="checkbox" class="checkbox">
-                <span> I agree to the term & condition</span>
-                <button type="submit" class="submit-btn">Register</button>
+                <input type="text" name="alamat" class="input-field" required>
+
+                <button type="submit" name="submitR" class="submit-btn">Register</button>
             </form>
 
         </div>
@@ -110,7 +105,8 @@ if(isset($_POST['submit'])){
             y.style.left = "450px"
             z.style.left = "0px"
         }
+
+        
     </script>
-    
 </body>
 </html>
